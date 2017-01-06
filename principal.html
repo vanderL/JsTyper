@@ -4,20 +4,46 @@
     <meta charset="UTF-8">
 
     <title>Alura Typer</title>
+       <link rel="stylesheet" href="css/libs/materialize.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/libs/google-fonts.css">
+
+
+
 </head>
 <body>
-   <p class="frase">DOM com Jquery!</p>
-   <ul class="informação">
-   		<li><span id="tamanho">30</span> palavras</li>
-   		<li><span id="tempo">3</span> segundo</li>
-   </ul>
 
-   <textarea class="campo-digitado" cols="40" rows="8"></textarea>
-   <button id="botao-reiniciar">Reiniciar</button>
-   <ul>
+<div class="container">
+	
+	<h1 class="center">JsTyper</h1>
+	<p class="frase center">Vamos ver se você consegue escrever tudo isso em 5 segundos</p>
+  
+	<ul class="informação center">
+   		<li>
+   			<i class="small material-icons icones">description</i>
+   			<span id="tamanho">30</span> palavras
+   		</li>
+   		<li>
+   			<i class="small material-icons icones">query_builder</i>
+   			<span id="tempo">5</span> segundo
+   		</li>
+	</ul>
+
+	<textarea class="campo-digitado" cols="40" rows="8"></textarea>
+	<div class="botoes">
+	    <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+	        <i class="material-icons">restore</i>
+	    </a>
+	</div>
+
+
+   <ul class="center">
    	<li><span id="contador-caractere">0</span> caracteres digitadas</li>
    	<li><span id="contador-palavra">0</span> palavras digitadas</li>
    </ul>
+	
+</div>
+
    <script src="js/jquery.js"></script>
    <script src="js/main.js"></script>
 </body>
