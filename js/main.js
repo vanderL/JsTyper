@@ -1,3 +1,5 @@
+//logica do contado de caracteres e palavras
+
 var frase = jQuery(".frase").text();
 var contador = frase.split(" ");
 var localFrase = $("#tamanho");
@@ -14,4 +16,18 @@ var campo = $(".campo-digitado");
 		var qtdCaracteres = conteudo.length;
 		$("#contador-caractere").text(qtdCaracteres);
 
-	})
+	});
+
+//  logica do cronometro
+var tempoRestante = $("#tempo").text();
+campo.one("focus", function(){
+	var cronometroID = setInterval(function(){
+		tempoRestante--;
+		console.log(tempoRestante);
+		$("#tempo").text(tempoRestante);
+		if (tempoRestante < 1) {
+			campo.attr("disabled", true);
+			clearInterval(cronometroID);
+		}
+	}, 1000);
+});
