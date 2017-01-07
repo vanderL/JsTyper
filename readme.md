@@ -3,6 +3,6 @@
 
 ### Ajax e Animações
 
-Será trabalhado com **jQuery** em animações, de 'fade in', 'fade out', 'scroll', 'slide up' e 'slide down'.
+Será trabalhado com **jQuery** em animações, de `fade in`, `fade out`, `scroll`, `slide up` e `slide down`.
 
 Também será visto os problemas mais comuns que os desenvolvedores encontram quando estão trabalhando com **AJAX**
