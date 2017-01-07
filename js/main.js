@@ -20,7 +20,7 @@ function atualizaTamanhoFrase() {
 //logica do contado de caracteres e palavras
 function inicializaContadores() {
 	campo.on("input", function(){
-		
+
 		var conteudo = campo.val();
 
 		var qtdPalavras = conteudo.split(/\S+/).length -1;
@@ -29,8 +29,8 @@ function inicializaContadores() {
 		var qtdCaracteres = conteudo.length;
 		$("#contador-caractere").text(qtdCaracteres);
 
-	});		
-}	
+	});
+}
 
 function inicializaMarcadores() {
     var frase = $(".frase").text();
@@ -50,7 +50,7 @@ function inicializaMarcadores() {
 
 //  logica do cronometro e fim do jogo
 function inicializaCronometro() {
-	
+
 	var tempoRestante = $("#tempo").text();
 	campo.one("focus", function(){
         $("#botao-reiniciar").attr("disabled",true);
@@ -77,6 +77,6 @@ function reiniciaJogo() {
 	$("#tempo").text(tempoInicial);
 	inicializaCronometro();
 	campo.removeClass("campo-desativado");
-	campo.removeClass("borda-vermelha");	
-    campo.removeClass("borda-verde"); 
+	campo.removeClass("borda-vermelha");
+  campo.removeClass("borda-verde"); 
 }
