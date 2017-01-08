@@ -1,3 +1,7 @@
+body {
+    overflow: scroll;
+}
+
 .campo-digitado {
     font-size: 20px;
     height: 130px;
@@ -22,4 +26,8 @@
 
 .borda-vermelha {
     border: 3px solid red;
+}
+
+.placar {
+  display: none;
 }
