@@ -9,6 +9,11 @@ $(document).ready(function(){
 	$("#botao-reiniciar").click(reiniciaJogo);
 })
 
+function atualizaTempoInicial(tempo) {
+    tempoInicial = tempo;
+    $("#tempo").text(tempo);
+}
+
 function atualizaTamanhoFrase() {
 	var frase = jQuery(".frase").text();
 	var contador = frase.split(" ");
@@ -33,8 +38,8 @@ function inicializaContadores() {
 }
 
 function inicializaMarcadores() {
-    var frase = $(".frase").text();
     campo.on("input", function() {
+				var frase = $(".frase").text();
         var digitado = campo.val();
         var comparavel = frase.substr(0 , digitado.length);
 
@@ -58,8 +63,8 @@ function mostraPlacar() {
 //  logica do cronometro e fim do jogo
 function inicializaCronometro() {
 
-	var tempoRestante = $("#tempo").text();
 	campo.one("focus", function(){
+				var tempoRestante = $("#tempo").text();
         $("#botao-reiniciar").attr("disabled",true);
 
 		var cronometroID = setInterval(function(){

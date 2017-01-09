@@ -1,0 +1,17 @@
+<h1 id="dropdown">Menu</h1>
+<ul style="display: none;" id="opcoes">
+    <li>Massas</li>
+    <li>Carnes</li>
+    <li>Saladas e Vegetais</li>
+</ul>
+<script src="js/jquery.js"></script>
+<script>
+
+$("#dropdown").mouseenter(function() {
+    $("#opcoes").stop().slideDown();
+});
+
+$("#dropdown").mouseleave(function() {
+    $("#opcoes").stop().slideUp();
+});
+ </script>
